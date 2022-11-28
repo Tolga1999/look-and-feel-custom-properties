@@ -480,11 +480,7 @@ button:hover {
   background-color: var(--orange);
 }
 
-.btn2:hover {
-  color: var(--white);
-}
-
-.btn3:hover {
+.btn2:hover, .btn3:hover {
   color: var(--white);
 }
 
@@ -513,11 +509,7 @@ button:hover {
   background-color: var(--white);
 }
 
-.td-button {
-  border-color: var(--white);
-}
-
-.th-button {
+.td-button, .th-button {
   border-color: var(--white);
 }
 
