@@ -5,6 +5,7 @@
   padding: 0;
 }
 
+/* Custom properties */
 :root {
   --blue: #333467;
   --orange: #F26F21;
@@ -14,13 +15,13 @@
   --form-background-color: #D6D6E1;
 }
 
-/* UTILITY CLASSES KAN JE NOG GEBRUIKEN */
-
 html {
   /* padding-top toegevoegd door de fixed header (het valt er anders achter) */
   scroll-padding-top: 13vh;
   scroll-behavior: smooth;
 }
+
+/* UTILITY CLASSES KAN JE NOG GEBRUIKEN */
 
 body {
   display: flex;
@@ -93,6 +94,15 @@ section {
   border-bottom: #dfdfdf solid 3px;
 }
 
+section>h2 {
+  color: var(--blue);
+  font-size: 26px;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
 /* INTRODUCTION */
 .section-introduction>p {
   width: 90%;
@@ -115,15 +125,6 @@ section {
 }
 
 /* INTRODUCTION END */
-
-section>h2 {
-  color: var(--blue);
-  font-size: 26px;
-}
-
-h2 {
-  margin-bottom: 1rem;
-}
 
 /* header */
 .fotos-header-onderdeel-desktop {
@@ -151,7 +152,6 @@ h2 {
 
 .section-color>h3 {
   padding-top: 50px;
-
 }
 
 /* KLEUR END */
@@ -405,6 +405,7 @@ table {
   font-size: 32pt;
   font-weight: bold;
 }
+
 /* TYPOGRAFIE END */
 
 /* iCONS */
@@ -434,6 +435,7 @@ table {
   box-shadow: #88a5bf7a 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
   padding: .5em;
 }
+
 /* ICONS END */
 
 /* BUTTONS  */
