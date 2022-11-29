@@ -115,6 +115,12 @@ h2 {
   font-size: 32px;
 }
 
+.p-introduction-second{
+  opacity: 0;
+  font-size: 30px;
+  transition: 1s ease;
+}
+
 .important-introduction {
   display: flex;
   flex-direction: column;
@@ -129,7 +135,8 @@ h2 {
 
 /* header */
 .fotos-header-onderdeel-desktop {
-  width: 650px;
+  width: 50vw;
+  margin: 0;
 }
 
 /* header end */
@@ -162,6 +169,7 @@ h2 {
 .container-anatomy-2 {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   padding: 1rem 0;
 }
 
@@ -209,7 +217,7 @@ h2 {
 .form-example-code-css {
   background-color: var(--form-background-color);
   width: 100%;
-  height: 32remx;
+  height: 32rem;
   border-radius: 5px;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -454,7 +462,6 @@ table {
   font-weight: bold;
   border-radius: 4px;
   cursor: pointer;
-  border: 2px solid black;
 }
 
 .btn1 {
@@ -466,12 +473,14 @@ table {
   background-color: white;
   border-style: solid var(--blue);
   color: var(--blue);
+  border: 2px solid black;
 }
 
 .btn3 {
   background-color: #33346727;
   border-style: solid var(--blue);
   color: var(--blue);
+  border: 2px solid black;
 }
 
 button:hover {
@@ -480,6 +489,7 @@ button:hover {
 
 .btn2:hover, .btn3:hover {
   color: var(--white);
+  border: 2px solid var(--orange);
 }
 
 .btn-plus {
@@ -524,7 +534,7 @@ td {
 .code-revieuw {
   background-color: var(--form-background-color);
   width: 100%;
-  height: 32remx;
+  height: 32rem;
   border-radius: 5px;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -574,47 +584,40 @@ td {
     margin: 0;
   }
 
-  .form-visible-code {
-    width: 100%;
+  img{
+    display: flex;
+    flex-direction: column;
+  }
+}
+/* MEDIA QUERY END */
+
+
+/* CONTAINER QUERY (gebaseerd op elementen) */
+.section-introduction{
+  container-type: inline-size;
+}
+
+/* of max-width: 600px */
+@container (width <= 600px){
+
+  .h1-introduction{
+    display: none;
   }
 
-  .form-onvisible-html pre {
-    line-height: normal;
-    overflow-x: scroll;
-
+  .p-introduction-second {
+    opacity: 1;
+    color: var(--orange);
+    animation: h1 2s infinite;
   }
 
-  .container-text-input,
-  .container-text-area {
-    display: inline;
-    flex-direction: row;
-    padding: 1rem 0;
-  }
-
-  .anatomie_img {
-    width: 100%;
-  }
-
-  .section-color img {
-    width: 100% !important;
-  }
-
-  .heading_alignment img,
-  .text_alignment img {
-    width: 100%;
-  }
-
-  .typografie-table {
-    overflow-x: auto;
-  }
-
-  .footer-article {
-    display: block;
-  }
-
-  .footer-wel-doen {
-    width: 100%;
+  .p-introduction-second:hover {
+    transform: scale(1.5);
   }
 }
 
-/* MEDIA QUERY END */
+/* CONTAINER QUERY END */
+
+@keyframes h1 {
+  50% {color: green;}
+  100% {color: red;}
+}
